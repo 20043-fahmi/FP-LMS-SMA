@@ -90,6 +90,7 @@ Route::get('/tugas', function () {
 Route::get('/form_tugas', function () {
     return view('tugas.form_tugas');
 });
+
 Route::get('/form_nilai', function () {
     return view('nilai.form_nilai');
 });

@@ -41,10 +41,11 @@
           <i class="icon-globe menu-icon"></i>
         </a>
       </li>
+      <li class="nav-item nav-category"><span class="nav-link">Information</span></li>
       <li class="nav-item">
-        <a class="nav-link" href="{{url('masuk')}}">
-          <span class="menu-title">user</span>
-          <i class="icon-globe menu-icon"></i>
+        <a class="nav-link" href="{{url('event')}}">
+          <span class="menu-title">event</span>
+          <i class="icon-grid menu-icon"></i>
         </a>
       </li>
       <li class="nav-item">
@@ -87,13 +88,7 @@
 
 
 
-      <li class="nav-item nav-category"><span class="nav-link">Information</span></li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{url('event')}}">
-          <span class="menu-title">Kalender Akademik</span>
-          <i class="icon-grid menu-icon"></i>
-        </a>
-      </li>
+
       @if (Auth::user()->role=='administrator')
       <li class="nav-item">
         <a class="nav-link" href="{{url('/register')}}">
