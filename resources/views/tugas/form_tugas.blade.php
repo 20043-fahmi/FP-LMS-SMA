@@ -23,11 +23,11 @@
                 <div class="col-md-6">
                     <form action="{{route('tugas.store')}}" method="post" role="form" class="php-email-form" enctype="multipart/form-data">
                         @csrf
-                        
+
                         <div class="form-group">
                             <div class="mb-3">
                                 <textarea name="keterangan" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Keterangan"></textarea>
-                            </div>    
+                            </div>
                         </div>
 
                         <div class="form-group">
@@ -47,25 +47,25 @@
                                 <div class="col form-group">
                                     <input type="date" name="tanggal" class="form-control" id="" placeholder="Tanggal" required>
                                 </div>
-                                <div class="col-3 form-group">    
+                                <div class="col-3 form-group">
                                     <input type="time" class="form-control" name="jam" id="" placeholder="" required>
                                 </div>
                             </div>
-                        
-                        <div class="form-group">
-                            <input type="text" name="perihal" class="form-control" id="" placeholder="Perihal" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <input type="file" class="form-control" name="upload" id="" placeholder="Upload">                              
-                        </div> 
 
-                        {{-- <div class="my-3">
+                            <div class="form-group">
+                                <input type="text" name="perihal" class="form-control" id="" placeholder="Perihal" required>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="file" class="form-control" name="upload" id="" placeholder="Upload">
+                            </div>
+
+                            {{-- <div class="my-3">
                             <div class="loading">Loading</div>
                             <div class="error-message"></div>
                             <div class="sent-message">Your message has been sent. Thank you!</div>
                         </div> --}}
-                        <div class="text-center"><button type="submit" class="form-control submit-btn">Simpan</button></div>
+                            <div class="text-center"><button type="submit" class="form-control submit-btn">Simpan</button></div>
                     </form>
                 </div>
             </div>

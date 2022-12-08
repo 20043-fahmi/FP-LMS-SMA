@@ -1,4 +1,4 @@
 @include('layouts.header')
-@include('layouts.topbar')
+<br><br><br>
 @yield('content')
 @include('layouts.footer')

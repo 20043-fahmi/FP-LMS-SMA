@@ -1,7 +1,9 @@
 @extends('admin.index')
-
 @section('content')
 @if (Auth::user()->role =='administrator')
+@php
+$ar_role = ['administrator','siswa','guru','staff'];
+@endphp
 
 <div class="container">
     <div class="row justify-content-center">
@@ -45,15 +47,16 @@
                             <label for="role" class="col-md-4 col-form-label text-md-end">{{ __('role') }}</label>
 
                             <div class="col-md-6">
-                                <input id="role" type="role" class="form-control @error('role') is-invalid @enderror" name="role" required autocomplete="role">
-
-                                @error('role')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
+                                <select class="form-select" name="role">
+                                    <option selected>-- Pilih akses --</option>
+                                    @foreach($ar_role as $role)
+                                    <option value="{{ $role }}">{{ $role }}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
+
+
 
                         <div class="row mb-3">
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
@@ -76,6 +79,7 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
+
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">

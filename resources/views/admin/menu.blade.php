@@ -41,7 +41,12 @@
           <i class="icon-globe menu-icon"></i>
         </a>
       </li>
-
+      <li class="nav-item">
+        <a class="nav-link" href="{{url('masuk')}}">
+          <span class="menu-title">user</span>
+          <i class="icon-globe menu-icon"></i>
+        </a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
           <span class="menu-title">Tables</span>
@@ -52,7 +57,9 @@
             <li class="nav-item"> <a class="nav-link" href="{{url('guru')}}">Guru & Staff</a></li>
             <li class="nav-item"> <a class="nav-link" href="{{url('siswa')}}">Siswa</a></li>
             <li class="nav-item"> <a class="nav-link" href="{{url('tugas')}}">Tugas</a></li>
+            <li class="nav-item"> <a class="nav-link" href="{{url('nilai')}}">nilai</a></li>
             <li class="nav-item"> <a class="nav-link" href="{{url('jadwal')}}">Jadwal</a></li>
+
           </ul>
         </div>
       </li>
@@ -66,7 +73,10 @@
           <ul class="nav flex-column sub-menu">
             <li class="nav-item"> <a class="nav-link" href="{{url('form_guru')}}">Guru & Staff</a></li>
             <li class="nav-item"> <a class="nav-link" href="{{url('form_siswa')}}">Siswa</a></li>
+            @if (Auth::user()->role=='administrator' && 'guru' )
+            <li class="nav-item"> <a class="nav-link" href="{{url('form_nilai')}}">nilai</a></li>
             <li class="nav-item"> <a class="nav-link" href="{{url('form_tugas')}}">Tugas</a></li>
+            @endif
             <li class="nav-item"> <a class="nav-link" href="{{url('form_jadwal')}}">Jadwal</a></li>
 
           </ul>
@@ -74,9 +84,12 @@
       </li>
 
 
+
+
+
       <li class="nav-item nav-category"><span class="nav-link">Information</span></li>
       <li class="nav-item">
-        <a class="nav-link" href="{{url('kalender')}}">
+        <a class="nav-link" href="{{url('event')}}">
           <span class="menu-title">Kalender Akademik</span>
           <i class="icon-grid menu-icon"></i>
         </a>
