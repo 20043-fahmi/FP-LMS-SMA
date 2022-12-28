@@ -1,3 +1,12 @@
+/* Utility */
+.title {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* End of Utility */
+
 .motivasi {
     background-color: #31C6D4;
     color: white;
@@ -147,7 +156,7 @@ label {
 }
 
 body {
-    background: #060606;
+    /* background: #060606; */
     font-family: tahoma;
     color: #fff;
 }
@@ -240,3 +249,44 @@ span.turn {
         width: 23%;
     }
 }
+
+/* Login Card */
+.col-card {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.login-card {
+    /* padding-top: 2rem; */
+    padding-bottom: 2rem;
+}
+
+.card-body {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.col-image {
+    /* visibility: visible; */
+}
+
+.line {
+    width: 53px;
+    height: 0;
+    border: 1px solid #C4C4C4;
+    margin: 3px;
+    display: inline-block;
+}
+
+@media screen and (max-width: 400px) {
+    .col-image {
+        /* visibility: hidden; */
+        display: none;
+    }
+
+    /* .row {
+        visibility: hidden;
+    } */
+}
+
+/* End of Login Card */
